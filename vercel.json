@@ -7,15 +7,15 @@
     { "src": "img/**", "use": "@vercel/static" },
     { "src": "server.js", "use": "@vercel/node" }
   ],
-  "routes": [
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/split-gif.html", "dest": "/split-gif.html" },
-    { "src": "/(.+\\.gif)", "dest": "/$1" },
-    { "src": "/(.+\\.js)", "dest": "/$1" },
-    { "src": "/(.+\\.css)", "dest": "/$1" },
-    { "src": "/(.+\\.html)", "dest": "/$1" },
-    { "src": "/img/(.*)", "dest": "/img/$1" },
-    { "src": "/(.*)", "dest": "/server.js" }
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/split-gif.html", "destination": "/split-gif.html" },
+    { "source": "/(.+\\.gif)", "destination": "/$1" },
+    { "source": "/(.+\\.js)", "destination": "/$1" },
+    { "source": "/(.+\\.css)", "destination": "/$1" },
+    { "source": "/(.+\\.html)", "destination": "/$1" },
+    { "source": "/img/(.*)", "destination": "/img/$1" },
+    { "source": "/(.*)", "destination": "/server.js" }
   ],
   "headers": [
     {
